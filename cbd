@@ -1,0 +1,36 @@
+{
+  "id": null,
+  "title": "Panel Rápido",
+  "type": "timeseries",
+  "datasource": {
+    "type": "prometheus",
+    "uid": "your-datasource-uid"
+  },
+  "targets": [
+    {
+      "expr": "rate(http_requests_total[5m])",
+      "legendFormat": "Requests",
+      "refId": "A"
+    }
+  ],
+  "fieldConfig": {
+    "defaults": {
+      "color": {
+        "mode": "palette-classic"
+      },
+      "custom": {
+        "drawStyle": "line",
+        "lineInterpolation": "smooth",
+        "lineWidth": 2,
+        "fillOpacity": 20,
+        "showPoints": "never"
+      }
+    }
+  },
+  "options": {
+    "legend": {
+      "displayMode": "table",
+      "placement": "bottom"
+    }
+  }
+}
